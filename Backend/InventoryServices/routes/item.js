@@ -10,7 +10,7 @@ const {
 
 router.get("/", GetItems);
 router.post("/", AddItems);
-router.delete("/", DeleteItems);
-router.patch("/", UpdateItems);
+router.delete("/:id", DeleteItems);
+router.patch("/:id", UpdateItems);
 
 module.exports = router;

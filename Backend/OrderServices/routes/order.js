@@ -9,7 +9,7 @@ const {
 
 router.get("/", GetOrders);
 router.post("/", AddOrder);
-router.patch("/", DeleteOrder);
-router.delete("/", UpdateOrder);
+router.patch("/:id", DeleteOrder);
+router.delete("/:id", UpdateOrder);
 
 module.exports = router;

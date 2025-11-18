@@ -3,8 +3,13 @@ const app = express();
 const dotenv = require("dotenv").config();
 const ItemRoute = require("./routes/item");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+app.use(cors());
 
-app.use(express.json());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use("/items", ItemRoute);
 const PORT = process.env.PORT;
 

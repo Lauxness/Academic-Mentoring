@@ -10,8 +10,10 @@ const GetItems = async (req, res) => {
 };
 const AddItems = async (req, res) => {
   const body = req.body;
-  console.log(body);
+  console.log("ahsdfjkhasdjkfhsaf");
   try {
+    const addedItem = await Items.create(body);
+    return res.status(200).json({ message: "Item added!" });
   } catch (err) {
     console.error(err);
   }

@@ -4,20 +4,16 @@ const Schema = mongoose.Schema;
 
 const itemModel = Schema(
   {
-    name: {
+    itemName: {
       type: String,
       required: true,
     },
-    age: {
+    price: {
       type: Number,
-      required: true,
-    },
-    address: {
-      type: String,
       required: true,
     },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("users", itemModel);
+module.exports = mongoose.model("items", itemModel);
